@@ -1,24 +1,25 @@
 package com.example.wavesoffood.screen.screen
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.wavesoffood.R
-import com.example.wavesoffood.databinding.ActivityStartBinding
+import com.example.wavesoffood.databinding.ActivitySignupBinding
 
-class StartActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
-    private val binding: ActivityStartBinding by lazy {
-        ActivityStartBinding.inflate(layoutInflater)
+    private val binding: ActivitySignupBinding by lazy {
+        ActivitySignupBinding.inflate(layoutInflater)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        binding.nextButton.setOnClickListener {
-            val intent = Intent(this, ChooseLocationActivity::class.java)
+
+        binding.haveanaccount.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
